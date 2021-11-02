@@ -1,4 +1,5 @@
 import 'package:belanja/models/Item.dart';
+import 'package:belanja/widgets/card_item.dart';
 import 'package:flutter/material.dart';
 
 class ItemPage extends StatelessWidget {
@@ -16,19 +17,9 @@ class ItemPage extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  "Name : " + itemArgs.name,
-                  style: const TextStyle(fontSize: 18),
-                ),
-                Text(
-                  "Price : " + itemArgs.price.toString(),
-                  style: const TextStyle(fontSize: 18),
-                ),
-              ],
-            ),
+            Center(
+              child: CardItem(itemArgs: itemArgs),
+            )
           ],
         ),
       ),
